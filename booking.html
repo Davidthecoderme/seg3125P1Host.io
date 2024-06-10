@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maple Canada Immigration - Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main-navbar {
+            background-color: #020d1e;
+            color: #fff; 
+        }
+
+        .main-navbar .navbar-brand img {
+            max-height: 45px; 
+            margin-right: 8px;  
+        }
+
+        .main-navbar .navbar-brand {
+            font-size: 1.6rem; 
+            font-weight: bold;
+            color: #dee2e6;
+        }
+
+        .main-navbar .nav-item .nav-link {
+            font-size: 1.1rem;
+            color: #fff; 
+        }
+
+        .main-navbar .nav-item .nav-link:hover {
+            color: #c05524; 
+        }
+
+        .btn-primary-custom {
+            background-color: #0dcaf0; 
+            color: #fff; 
+            font-weight: bold; 
+        }
+
+        body {
+            background-color: white; 
+            color: #343a40; 
+        }
+        .main-footer {
+            background-color: #343a40; 
+            color: #e9ecef; 
+            padding: 40px 0; 
+        }
+
+        .main-footer a {
+            color: #0dcaf0; 
+            text-decoration: none; 
+        }
+
+        .main-footer a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .footer-info, .footer-contact {
+            margin-bottom: 20px;
+        }
+        .footer-links{
+            text-align: right;
+        }
+
+        .footer-info p {
+            margin: 0;
+        } 
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg main-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="./index.html">
+            <img src="./image/image.png" alt="Logo">
+            ABC Immigration
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html#reviews">check our reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary-custom ms-3">Book Now</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 mb-5" >
+    <h1 class="text-center mb-4">Book a Consultant</h1>
+    <form id="bookingForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone-number" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone-number" required>
+        </div>
+        <div class="mb-3">
+            <label for="service" class="form-label">Select Service</label>
+            <select class="form-select" id="service" required>
+                <option value="visa application">Visa Consultation</option>
+                <option value="permanent residency application">Permanent Residency</option>
+                <option value="citizenship application">Citizenship Application</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="duration" class="form-label">Select Duration</label>
+            <select class="form-select" id="duration" required>
+                <option value="1 hour">1 Hour</option>
+                <option value="2 hours">2 Hours</option>
+                <option value="3 hours">3 Hours</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="multiplePersonsCheck">
+            <label class="form-check-label" for="multiplePersonsCheck">
+                Booking for multiple persons
+            </label>
+        </div>
+        <div id="additionalPersons" style="display: none;">
+            <h5>Additional Persons</h5>
+            <div class="additional-person mb-3">
+                <label for="additionalName1" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="additionalName1">
+                <label for="additionalEmail1" class="form-label mt-2">Email Address</label>
+                <input type="email" class="form-control" id="additionalEmail1">
+                <label for="additionalPhoneNumber1" class="form-label mt-2">Phone Number</label>
+                <input type="text" class="form-control" id="additionalPhoneNumber1">
+                <label for="additionalService1" class="form-label mt-2">Select Service</label>
+                <select class="form-select" id="additionalService1">
+                    <option value="visa application">Visa Consultation</option>
+                    <option value="permanent residency application">Permanent Residency</option>
+                    <option value="citizenship application">Citizenship Application</option>
+                </select>
+                <label for="additionalDuration1" class="form-label mt-2">Select Duration</label>
+                <select class="form-select" id="additionalDuration1">
+                    <option value="1 hour">1 Hour</option>
+                    <option value="2 hours">2 Hours</option>
+                    <option value="3 hours">3 Hours</option>
+                </select>
+                <label for="additionalDate1" class="form-label mt-2">Preferred Date</label>
+                <input type="date" class="form-control" id="additionalDate1">
+            </div>
+            <button type="button" class="btn btn-secondary" id="addPersonBtn">Add Another Person</button>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="submitBooking()">Submit</button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="bookingSuccessModal" tabindex="-1" aria-labelledby="bookingSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingSuccessModalLabel">Booking Successful</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="bookingDetails">
+                <!-- Booking details will be displayed here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Back to Home</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('multiplePersonsCheck').addEventListener('change', function() {
+        var additionalPersonsDiv = document.getElementById('additionalPersons');
+        additionalPersonsDiv.style.display = this.checked ? 'block' : 'none';
+    });
+
+    var personCount = 1;
+
+    document.getElementById('addPersonBtn').addEventListener('click', function() {
+        personCount++;
+        var additionalPersonsDiv = document.getElementById('additionalPersons');
+        var newPersonDiv = document.createElement('div');
+        newPersonDiv.classList.add('additional-person', 'mb-3');
+        newPersonDiv.innerHTML = `
+            <label for="additionalName${personCount}" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="additionalName${personCount}">
+            <label for="additionalEmail${personCount}" class="form-label mt-2">Email Address</label>
+            <input type="email" class="form-control" id="additionalEmail${personCount}">
+            <label for="additionalPhoneNumber${personCount}" class="form-label mt-2">Phone Number</label>
+            <input type="text" class="form-control" id="additionalPhoneNumber${personCount}">
+            <label for="additionalService${personCount}" class="form-label mt-2">Select Service</label>
+            <select class="form-select" id="additionalService${personCount}">
+                <option value="visa application">Visa Consultation</option>
+                <option value="permanent residency application">Permanent Residency</option>
+                <option value="citizenship application">Citizenship Application</option>
+            </select>
+            <label for="additionalDuration${personCount}" class="form-label mt-2">Select Duration</label>
+            <select class="form-select" id="additionalDuration${personCount}">
+                <option value="1 hour">1 Hour</option>
+                <option value="2 hours">2 Hours</option>
+                <option value="3 hours">3 Hours</option>
+            </select>
+            <label for="additionalDate${personCount}" class="form-label mt-2">Preferred Date</label>
+            <input type="date" class="form-control" id="additionalDate${personCount}">
+        `;
+        additionalPersonsDiv.insertBefore(newPersonDiv, document.getElementById('addPersonBtn'));
+    });
+
+    function submitBooking() {
+        // Get user input values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phone-number").value;
+        var service = document.getElementById("service").value;
+        var duration = document.getElementById("duration").value;
+        var date = document.getElementById("date").value;
+
+        // Validate inputs
+        if (name.trim() === "" || email.trim() === "" || phoneNumber.trim() === "" || duration.trim() === "" || service.trim() === "" || date.trim() === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        var bookingDetails = "<p><strong>Name:</strong> " + name + "</p>" +
+            "<p><strong>Email:</strong> " + email + "</p>" +
+            "<p><strong>Phone Number:</strong> " + phoneNumber + "</p>" +
+            "<p><strong>Service:</strong> " + service + "</p>" +
+            "<p><strong>Duration:</strong> " + duration + "</p>" +
+            "<p><strong>Preferred Date:</strong> " + date + "</p>";
+
+        // Check if multiple persons booking
+        if (document.getElementById('multiplePersonsCheck').checked) {
+            bookingDetails += "<h5>Additional Persons:</h5>";
+            for (var i = 1; i <= personCount; i++) {
+                var additionalName = document.getElementById('additionalName' + i).value;
+                var additionalEmail = document.getElementById('additionalEmail' + i).value;
+                var additionalPhoneNumber = document.getElementById('additionalPhoneNumber' + i).value;
+                var additionalService = document.getElementById('additionalService' + i).value;
+                var additionalDuration = document.getElementById('additionalDuration' + i).value;
+                var additionalDate = document.getElementById('additionalDate' + i).value;
+
+                if (additionalName.trim() !== "" || additionalEmail.trim() !== "" || additionalPhoneNumber.trim() !== "") {
+                    bookingDetails += "<p><strong>Name:</strong> " + additionalName + "</p>" +
+                        "<p><strong>Email:</strong> " + additionalEmail + "</p>" +
+                        "<p><strong>Phone Number:</strong> " + additionalPhoneNumber + "</p>" +
+                        "<p><strong>Service:</strong> " + additionalService + "</p>" +
+                        "<p><strong>Duration:</strong> " + additionalDuration + "</p>" +
+                        "<p><strong>Preferred Date:</strong> " + additionalDate + "</p>";
+                }
+            }
+        }
+
+        // Display booking details in modal
+        var modalBody = document.getElementById("bookingDetails");
+        modalBody.innerHTML = bookingDetails;
+
+        // Show modal
+        var modal = new bootstrap.Modal(document.getElementById('bookingSuccessModal'), {});
+        modal.show();
+    }
+</script>
+
+
+<!-- Footer -->
+<footer class="main-footer" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-logo">
+                <!-- Logo -->
+                <img src="./image/image.png" alt="Logo">
+            </div>
+            <div class="col-md-4 footer-info">
+                <h5>Contact Information</h5>
+                <p>Phone: +1234567890</p>
+                <p>Email: immigrationInfo@example.com</p>
+                <p>Address: 123 Maple Street, ottawa,Ontario, Canada, K1A, 5B2</p>  
+                <hr>
+
+                <!-- Hours of Service -->
+                <h5>Hours of Service</h5>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="col-md-4 footer-links">
+                <!-- Links to other pages -->
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./index.html#services">Services</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p>&copy; 2024 Maple Canada Immigration. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
